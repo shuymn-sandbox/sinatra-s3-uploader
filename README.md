@@ -7,6 +7,12 @@
 
 ## Getting Started
 
+DBのコンテナを起動する準備をする。env-exampleをコピーして、必要な情報(rootパスワードなど)を追記する
+
+```shell
+cp docker/db/env-example .env
+```
+
 DBのコンテナを起動
 
 ```shell
