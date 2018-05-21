@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+
+  db:
+    image: mysql:5.7
+    restart: always
+    env_file:
+      - ./docker/db/.env
+    volumes:
+      - ./docker/db/data:/var/lib/mysql
+      - ./docker/db/conf.d:/etc/mysql/conf.d
+    ports:
+      - '3306:3306'
+    networks:
+      - backend
+
+networks:
+  frontend:
+    driver: 'bridge'
+  backend:
+    driver: 'bridge'
