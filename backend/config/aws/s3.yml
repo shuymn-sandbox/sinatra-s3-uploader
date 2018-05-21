@@ -1,0 +1,14 @@
+default: &default
+  access_key:
+  secret_key:
+  region:
+  bucket:
+
+production:
+  <<: *default
+
+development:
+  <<: *default
+
+test:
+  <<: *default
